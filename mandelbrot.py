@@ -1,7 +1,7 @@
 from turtle import *
 
 HEIGHT, WIDTH = 180, 180
-ITERATION = 10
+ITERATION = 100
 screen = Screen()
 screen.setup(WIDTH + 4, HEIGHT + 8)
 screen.screensize(WIDTH, HEIGHT)
@@ -11,6 +11,8 @@ tu = Turtle()
 tu.hideturtle()
 tu.speed(100)
 tu.penup()
+
+screen.tracer(False)
 
 
 def mapPoint(n, start1, stop1, start2, stop2):
@@ -46,4 +48,7 @@ for x in range(WIDTH):
         tu.pendown()
         tu.dot(4, bright)
         tu.penup()
+
+screen.update()
+screen.tracer(True)
 done()
